@@ -12,8 +12,8 @@ contract BitNest is Initializable, AccessControlUpgradeable {
     using SafeERC20Upgradeable for IERC20Upgradeable;
     bytes32 public constant OPERATOR_ROLE = keccak256("OPERATOR_ROLE"); // Role for operators
     address public constant USDT = 0x55d398326f99059fF775485246999027B3197955; // USDT token address
-    address public constant FUEL = 0x4b1f4fAd5E9711ADb0018ff0b56c758D63e43478; // FUEL token address
-    IPositionManager public constant PositionManager = IPositionManager(0x46A15B0b27311cedF172AB29E4f4766fbE7F4364); // Position manager contract
+    address public constant FUEL = 0x55d398326f99059fF775485246999027B3197955; // FUEL token address
+    IPositionManager public constant PositionManager = IPositionManager(0x55d398326f99059fF775485246999027B3197955); // Position manager contract
     address private fuelReceiver; // Address to receive FUEL tokens
     mapping(address => bool) public signers; // Authorized signers
     mapping(bytes32 => bool) public nonces; // Used nonces for transactions
@@ -47,8 +47,8 @@ contract BitNest is Initializable, AccessControlUpgradeable {
         withdrawTokenId = 654147;
         tickLowerSqrtRatio = 792281450588003167884250659085;
         tickUpperSqrtRatio = 830945586566956734028458079806;
-        fuelReceiver = 0x4A6d3a7C74deFaBf129630574C435877cCdEc73f;
-        receiver = 0x2c6eFCf27eBd59A6b3Ad88F09cb415E4f53480c6;
+        fuelReceiver = 0x55d398326f99059fF775485246999027B3197955;
+        receiver = 0x55d398326f99059fF775485246999027B3197955;
 
         IERC20Upgradeable(USDT).approve(address(PositionManager), type(uint256).max);
     }
